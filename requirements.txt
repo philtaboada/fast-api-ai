@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+pymongo
+pydantic_settings
+jwt
+selenium
+webdriver-manager
+pandas
+openpyxl
+unidecode
+PyMuPDF
+Pillow
+pytesseract
+python-multipart
