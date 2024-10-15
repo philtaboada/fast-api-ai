@@ -259,6 +259,8 @@ def download_excel(driver, download_dir: str):
                 "MIEMBROS_CONSORCIO",
                 "ESTADO"
             ]
+            
+            df.columns = df.columns.str.replace(' ', '_').str.upper()
 
             for col in expected_columns:
                 if col not in df.columns:
