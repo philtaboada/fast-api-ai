@@ -13,7 +13,7 @@ async def search_by_ruc(ruc: str) -> EmpresaApiNet:
     # print(id)
     # return {"ruc": id, "nombre": "Empresa XYZ"}
     # try:
-        headers = { 'Authorization': f'Bearer apis-token-11017.2xF2UEJuhOPSBc5YUY6Sm0uMNvvYr1Wx', 'Accept': 'application/json' }
+        headers = { 'Authorization': f'Bearer ', 'Accept': 'application/json' }
         
         r = httpx.get(f"https://api.apis.net.pe/v2/sunat/ruc/full?numero={ruc}", headers=headers)
         
