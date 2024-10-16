@@ -1,15 +1,34 @@
+# Paquetes base para FastAPI y Pydantic
 fastapi
 uvicorn[standard]
 pydantic
-pymongo
 pydantic_settings
+
+# MongoDB y autenticación
+pymongo
 jwt
+
+# Manejo de Selenium para automatización de navegadores
 selenium
 webdriver-manager
+
+# Manipulación de datos y Excel
 pandas
+numpy
 openpyxl
+
+# Manejo de textos y PDFs
 unidecode
 PyMuPDF
-Pillow
+pypdf
 pytesseract
+
+# Imágenes
+Pillow
+
+# Para manejar archivos en FastAPI
 python-multipart
+
+# Bibliotecas para IA generativa y manejo de PDF que usabas antes
+google-generativeai
+langchain-google-genai
