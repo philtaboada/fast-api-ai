@@ -11,7 +11,7 @@ env\Scripts\activate
 pip install -r requirements.txt
 
 #init fastapi
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload --port 8080
 
 #run tests
 pytest

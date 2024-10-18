@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import login, user, scraping_ruc, business, scraping_state_suppliers, pdf_routes
+from app.api.routes import login, user, scraping_ruc, business, scraping_state_suppliers, pdf_routes, gemini_api
 
 api = APIRouter() 
 
@@ -10,3 +10,4 @@ api.include_router(scraping_ruc.scrapping_ruc, prefix="/scrapping_ruc", tags=["s
 api.include_router(business.business, prefix="/business", tags=["business"])
 api.include_router(scraping_state_suppliers.scraping_state_suppliers, prefix="/state_suppliers", tags=["state_suppliers"])
 api.include_router(pdf_routes.router, prefix="/pdf", tags=["pdf"])
+api.include_router(gemini_api.gemini_api, prefix="/gemini", tags=["gemini"])
