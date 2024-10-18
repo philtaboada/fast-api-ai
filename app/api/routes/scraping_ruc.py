@@ -34,9 +34,10 @@ async def post_ruc():
         Dict: Un diccionario con los resultados de la consulta del RUC.
     """
     try:
-        result = await run_in_threadpool(get_info_ruc, ruc_number="20531654430")
+        result = await run_in_threadpool(get_info_ruc, ruc_number="20604944903")
         if "error" in result:
             raise HTTPException(status_code=500, detail=result["error"])
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
