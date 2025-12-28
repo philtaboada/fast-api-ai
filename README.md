@@ -1,86 +1,84 @@
 # Fast-API-AI — RAG System (Retrieval-Augmented Generation)
 
-Este repositorio contiene una **API de Generación Aumentada por Recuperación (RAG)** desarrollada con **FastAPI**, diseñada para permitir consultas inteligentes sobre documentos mediante **búsqueda semántica basada en embeddings**.
+This repository contains a **Retrieval-Augmented Generation (RAG) API** built with **FastAPI**, designed to enable intelligent, context-aware queries over document collections using **vector-based semantic search**.
 
-El sistema combina recuperación de información relevante desde una base de datos vectorial con modelos de IA para generar respuestas contextualizadas, precisas y escalables.
-
----
-
-## 📌 Objetivo del Proyecto
-
-Demostrar una arquitectura moderna de **IA aplicada a documentos**, capaz de:
-
-- Ingerir información no estructurada
-- Transformarla en representaciones vectoriales
-- Recuperar contexto relevante de forma semántica
-- Integrarlo dinámicamente en respuestas generadas por IA
-
-Este enfoque es ideal para **chatbots empresariales**, **asistentes internos**, **bases de conocimiento**, **FAQ inteligentes** y **sistemas de soporte automatizados**.
+The system combines **information retrieval** from a vector database with **large language models** to generate accurate, grounded, and scalable AI responses.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## 📌 Project Purpose
 
-- **Lenguaje:** Python 100%
-- **Framework API:** FastAPI
-- **Base de Datos Vectorial:** ChromaDB
-- **Modelo de Embeddings:** Configurable (OpenAI / Local / otros)
-- **Servidor ASGI:** Uvicorn
-- **Puerto por defecto:** `8080`
+This project demonstrates a modern **document-aware AI architecture** capable of:
 
----
+- Ingesting unstructured data
+- Converting documents into vector embeddings
+- Performing semantic retrieval based on meaning
+- Injecting relevant context into AI-generated responses
 
-## 🧠 Arquitectura RAG (Alto Nivel)
-
-1. **Ingesta de documentos**
-   - Procesamiento de archivos (texto / PDF / etc.)
-   - División en chunks
-   - Generación de embeddings
-   - Almacenamiento en ChromaDB
-
-2. **Consulta semántica**
-   - El usuario realiza una pregunta
-   - Se generan embeddings de la consulta
-   - Se recuperan los fragmentos más relevantes por similitud vectorial
-
-3. **Generación de respuesta**
-   - El contexto recuperado se envía al modelo de IA
-   - El modelo genera una respuesta informada y contextual
+It is suitable for **enterprise chatbots**, **internal AI assistants**, **knowledge bases**, **FAQ automation**, and **customer support systems**.
 
 ---
 
-## 🚀 Funcionalidades Principales
+## 🛠️ Technology Stack
 
-- 📥 **Ingesta de Documentos**
-  - Procesamiento automático
-  - Indexación vectorial eficiente
-  - Persistencia en ChromaDB
+- **Language:** Python
+- **API Framework:** FastAPI
+- **Vector Database:** ChromaDB
+- **Embedding Model:** Configurable (OpenAI / local / others)
+- **ASGI Server:** Uvicorn
+- **Default Port:** `8080`
 
-- 🔍 **Búsqueda Semántica**
-  - No depende de palabras clave exactas
-  - Recuperación basada en significado y contexto
+---
 
-- 🤖 **API de Respuestas con IA**
-  - Endpoint unificado para preguntas
-  - Integración directa con modelos de lenguaje
-  - Respuestas enriquecidas con contexto real
+## 🧠 RAG Architecture (High-Level)
 
-- ⚡ **Arquitectura Escalable**
+1. **Document Ingestion**
+   - File parsing and preprocessing
+   - Text chunking
+   - Embedding generation
+   - Vector storage in ChromaDB
+
+2. **Semantic Querying**
+   - User submits a question
+   - Query is converted into embeddings
+   - Most relevant document chunks are retrieved via vector similarity
+
+3. **Response Generation**
+   - Retrieved context is passed to the LLM
+   - The model generates a grounded, context-aware response
+
+---
+
+## 🚀 Core Features
+
+- 📥 **Document Ingestion**
+  - Automated document processing
+  - Efficient vector indexing
+  - Persistent storage with ChromaDB
+
+- 🔍 **Semantic Search**
+  - Meaning-based retrieval
+  - Not limited to keyword matching
+
+- 🤖 **AI-Powered Answer API**
+  - Unified endpoint for questions
+  - Dynamic context injection
+  - Model-agnostic design
+
+- ⚡ **Scalable Architecture**
   - Stateless API
-  - Fácil integración con frontend o sistemas externos
-  - Lista para contenedores y despliegue cloud
+  - Easy frontend and system integration
+  - Cloud and container ready
 
 ---
 
-## 💻 Instalación y Uso
+## 💻 Installation & Usage
 
-### 1️⃣ Crear entorno virtual
+### 1️⃣ Create a virtual environment
 
 ```bash
 python3 -m venv env
 source env/bin/activate
-
-
 
 #Create a virtual environment
 python3 -m venv env
